@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Happy Family ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fffaf5;
+    color: #45352f;
+    line-height: 1.6;
+}
+
+header {
+    background: #fffaf5;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #00000010;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #b85c5c;
+}
+
+nav a {
+    text-decoration: none;
+    color: #45352f;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b85c5c;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background:
+    linear-gradient(#241a1660, #241a1680),
+    url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1800&q=85')
+    center/cover;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 70px);
+    margin-bottom: 15px;
+    animation: rise 1s ease;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #b85c5c;
+    color: white;
+    padding: 13px 27px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #914242;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #a34f4f;
+}
+
+.subtitle {
+    color: #82736b;
+    margin-bottom: 35px;
+}
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    font-size: 17px;
+}
+
+.cards, .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 20px;
+    box-shadow: 0 5px 22px #55332212;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.avatar {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #f6d9d2;
+}
+
+.card h3 {
+    color: #a34f4f;
+    margin-bottom: 7px;
+}
+
+.memory {
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.memory img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.memory:hover img {
+    transform: scale(1.05);
+}
+
+.memory h3, .memory p {
+    padding: 0 18px;
+}
+
+.memory h3 {
+    margin-top: 15px;
+}
+
+.memory p {
+    padding-bottom: 20px;
+    color: #82736b;
+}
+
+.quote {
+    background: #f8e9e2;
+    padding: 65px 20px;
+}
+
+.quote p {
+    font-size: clamp(21px, 4vw, 30px);
+    font-style: italic;
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact {
+    background: white;
+}
+
+.contact a {
+    color: #a34f4f;
+}
+
+footer {
+    text-align: center;
+    background: #493630;
+    color: white;
+    padding: 25px 15px;
+}
+
+footer span {
+    color: #ffb7b7;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">❤️ Our Family</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#members">Members</a>
+        <a href="#memories">Memories</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <h1>Welcome to Our Family</h1>
+    <p>
+        A place filled with love, laughter, beautiful memories,
+        and the people who make life special.
+    </p>
+    <a href="#about" class="btn">Discover Our Story ❤️</a>
+</section>
+
+<section id="about">
+    <h2 class="section-title">Our Beautiful Family</h2>
+    <p class="subtitle">Together is our favourite place to be.</p>
+    <div class="about">
+        <p>
+            Family is not just about sharing a home.
+            It is about sharing happiness, supporting one another,
+            celebrating little moments, and standing together
+            through every chapter of life.
+        </p>
+        <br>
+        <p>
+            This website is our little corner of the internet,
+            created to celebrate the people we love and preserve
+            our most precious memories for years to come.
+        </p>
+    </div>
+</section>
+
+<section id="members" style="background:#fff1eb;">
+    <h2 class="section-title">Meet Our Family</h2>
+    <p class="subtitle">The special people who make our family complete.</p>
+
+    <div class="cards">
+        <div class="card">
+            <img class="avatar"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+            alt="Father">
+            <h3>Father 👨</h3>
+            <p>Our strength, guide, and biggest supporter.</p>
+        </div>
+
+        <div class="card">
+            <img class="avatar"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+            alt="Mother">
+            <h3>Mother 👩</h3>
+            <p>Our heart, our comfort, and endless love.</p>
+        </div>
+
+        <div class="card">
+            <img class="avatar"
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
+            alt="Brother">
+            <h3>Brother 🧑</h3>
+            <p>A partner in fun, laughter, and adventures.</p>
+        </div>
+    </div>
+</section>
+
+<section id="memories">
+    <h2 class="section-title">Our Precious Memories</h2>
+    <p class="subtitle">Every picture tells a beautiful story.</p>
+
+    <div class="gallery">
+        <div class="card memory">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=80"
+            alt="Family together">
+            <h3>Family Time ❤️</h3>
+            <p>The moments we spend together are priceless.</p>
+        </div>
+
+        <div class="card memory">
+            <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=700&q=80"
+            alt="Outdoor adventure">
+            <h3>Our Adventures 🌿</h3>
+            <p>Exploring new places and making memories.</p>
+        </div>
+
+        <div class="card memory">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=80"
+            alt="Family celebration">
+            <h3>Special Celebrations 🎉</h3>
+            <p>Celebrating life's happiest occasions together.</p>
+        </div>
+    </div>
+</section>
+
+<section class="quote">
+    <p>
+        "Family means nobody gets left behind or forgotten."
+    </p>
+    <br>
+    <strong>— Our Family, Our Forever ❤️</strong>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Stay Connected</h2>
+    <p class="subtitle">
+        Our family story keeps growing, one beautiful day at a time.
+    </p>
+    <p>Made with ❤️ for the people who matter most.</p>
+</section>
+</main>
+
+<footer>
+    <p>© <span id="year"></span> Our Happy Family.
+    Made with <span>♥</span> and love.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// Smooth reveal effect as sections enter the screen
+const sections = document.querySelectorAll("section");
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    sections.forEach(section => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(18px)";
+        section.style.transition = "opacity 0.7s ease, transform 0.7s ease";
+        observer.observe(section);
+    });
+}
+</script>
+
+</body>
+</html>
